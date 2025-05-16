@@ -93,4 +93,14 @@ abstract class AppTextStyles {
       color: color,
     );
   }
+  static TextStyle f36w700(
+    BuildContext context, {
+    Color color = AppColors.black,
+  }) {
+    return TextStyle(
+      fontSize: ResponsiveHelper.sp(context, fontSize: 36),
+      fontWeight: FontWeight.w700,
+      color: color,
+    );
+  }
 }
