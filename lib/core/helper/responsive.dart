@@ -5,15 +5,15 @@ abstract class ResponsiveHelper {
   static double designHeight = 812;
 
   static double w(context, {required double width}) {
-    return MediaQuery.of(context).size.width * (width / designWidth);
+    return MediaQuery.of(context).size.width * (width / 375);
   }
 
   static double h(context, {required double height}) {
-    return MediaQuery.of(context).size.height * (height / designHeight);
+    return MediaQuery.of(context).size.height * (height / 812);
   }
 
   static double sp(BuildContext context, {required double fontSize}) {
     // Scale based on width
-    return MediaQuery.of(context).size.width * (fontSize / designWidth);
+    return MediaQuery.of(context).size.width * (fontSize / 375);
   }
 }

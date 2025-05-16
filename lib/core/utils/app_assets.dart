@@ -11,4 +11,7 @@ abstract class AppAssets {
   static const String onboarding_3 = '${_basePath}onboarding_3.svg';
   static const String phoneIcon = '${_basePath}phone_icon.svg';
   static const String userIcon = '${_basePath}user_icon.svg';
+   static const String leftIcon = '${_basePath}icon_left.svg';
+    static const String rightIcon = '${_basePath}icon_right.svg';
+    static const String eyeIcon = '${_basePath}eye_icon.svg';
 }
