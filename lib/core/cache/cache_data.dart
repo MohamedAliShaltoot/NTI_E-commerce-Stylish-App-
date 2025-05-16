@@ -4,4 +4,6 @@ abstract class CacheData {
 
   static String? lang;
   static String? accessToken;
+
+  static var loggedIn;
 }

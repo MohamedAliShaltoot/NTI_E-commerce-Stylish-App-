@@ -5,6 +5,7 @@ import 'package:nti_grad_project/core/cache/cache_helper.dart';
 import 'package:nti_grad_project/core/translation/translation_helper.dart';
 import 'package:nti_grad_project/core/utils/app_colors.dart';
 import 'package:nti_grad_project/core/utils/app_strings.dart';
+import 'package:nti_grad_project/features/on_boarding/views/splash_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       ),
       title: AppStrings.appTitle,
       
-      home: Scaffold(),
+      home: SplashView(),
     );
   }
 }

@@ -1,7 +1,7 @@
 abstract class AppAssets {
   static const String _basePath = 'assets/images/';
 
-  static const String splash = '${_basePath}splash_logo.svg';
+  static const String splash = '${_basePath}logo_image.svg';
   static const String getStartedBackground =
       '${_basePath}get_started_background.png';
   static const String emailIcon = '${_basePath}email_icon.svg';
