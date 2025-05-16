@@ -17,4 +17,10 @@ Map<String, String> ar = {
   TranslationKeys.findItHereHuyItNow: 'ابحث عنه هنا، اشتريه الآن!',
   TranslationKeys.youWantAuthenticHereYouGo: 'تريد الأصلي، ها هو!',
   TranslationKeys.welcomeBack: 'مرحباً بعودتك',
+  TranslationKeys.confirmPasswordHintText: "تاكيد",
+  TranslationKeys.passwordHintText: "Password",
+  TranslationKeys.emailHintText: "Email",
+  TranslationKeys.phoneHintText: "Phone",
+  TranslationKeys.fullNameHintText: "FullName",
+
 };

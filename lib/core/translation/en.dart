@@ -14,5 +14,10 @@ Map<String, String> en = {
   TranslationKeys.login: 'Login',
   TranslationKeys.findItHereHuyItNow: 'Find it here, buy it now!',
   TranslationKeys.youWantAuthenticHereYouGo: 'You want Authentic, here you go!',
-  TranslationKeys.welcomeBack: 'Welcome Back',
+  TranslationKeys.welcomeBack: 'Welcome \nBack!',
+  TranslationKeys.confirmPasswordHintText:"ConfirmPassword",
+  TranslationKeys.passwordHintText: "Password",
+  TranslationKeys.emailHintText: "Email",
+  TranslationKeys.phoneHintText: "Phone",
+  TranslationKeys.fullNameHintText: "FullName",
 };
