@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nti_grad_project/core/helper/my_navigator.dart';
 import 'package:nti_grad_project/core/translation/translation_keys.dart';
 import 'package:nti_grad_project/core/utils/app_assets.dart';
 import 'package:nti_grad_project/core/widgets/my_button.dart';
+import 'package:nti_grad_project/features/auth/views/login_view.dart';
 import 'package:nti_grad_project/features/on_boarding/widgets/my_outlined_button.dart';
 
 
@@ -64,7 +66,11 @@ class GetStartedView extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: ResponsiveHelper.h(context, height: 24)),
-                MyButton(title: TranslationKeys.login.tr, onPressed: () {}),
+                MyButton(title: TranslationKeys.login.tr, onPressed: () {
+                  MyNavigator.goTo(screen: LoginView(),
+                    isReplace:false,
+                  );
+                }),
                 SizedBox(height: ResponsiveHelper.h(context, height: 15)),
                 MyOutlinedButton(
                   title: TranslationKeys.register.tr,
