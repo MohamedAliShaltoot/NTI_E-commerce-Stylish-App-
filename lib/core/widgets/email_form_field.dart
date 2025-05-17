@@ -12,7 +12,7 @@ class CustomFormField {
     required hintText,
     required TextEditingController emailController,
     //required bool isPasswordVisible,
-    required void Function() onTap,
+    //required void Function() onTap,
     FormFieldValidator<String>? validator,
     required BuildContext context,
   }) {
