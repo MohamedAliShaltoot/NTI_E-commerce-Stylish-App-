@@ -9,6 +9,7 @@ import 'package:nti_grad_project/core/utils/app_strings.dart';
 import 'package:nti_grad_project/features/auth/manager/login_cubit/login_cubit.dart';
 import 'package:nti_grad_project/features/auth/manager/register_cubit/register_cubit.dart';
 import 'package:nti_grad_project/features/on_boarding/views/splash_view.dart';
+import 'package:nti_grad_project/features/profile_screen/views/profile_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,21 +25,21 @@ class StylishApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: [
-         BlocProvider<LoginCubit>(create: (context) => LoginCubit()),
+        BlocProvider<LoginCubit>(create: (context) => LoginCubit()),
         BlocProvider<RegisterCubit>(create: (context) => RegisterCubit()),
       ],
       child: GetMaterialApp(
         locale: Locale(CacheData.lang!),
         translations: TranslationHelper(),
         debugShowCheckedModeBanner: false,
-      
+
         theme: ThemeData(
           scaffoldBackgroundColor: AppColors.scaffoldBackground,
           fontFamily: AppStrings.fontFamily,
         ),
         title: AppStrings.appTitle,
-      
-        home: SplashView(),
+
+        home: ProfileView(),
       ),
     );
   }

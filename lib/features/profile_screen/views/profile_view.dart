@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nti_grad_project/core/helper/custom_svg_picture.dart';
+import 'package:nti_grad_project/core/helper/my_navigator.dart';
 import 'package:nti_grad_project/core/helper/responsive.dart';
 import 'package:nti_grad_project/core/utils/app_assets.dart';
 import 'package:nti_grad_project/core/utils/app_colors.dart';
+import 'package:nti_grad_project/features/profile_screen/views/setting_view.dart';
+import 'package:nti_grad_project/features/profile_screen/views/user_profile_view.dart';
 import 'package:nti_grad_project/features/profile_screen/widgets/custom_profile_settings.dart';
 
 class ProfileView extends StatelessWidget {
@@ -73,6 +76,11 @@ class ProfileView extends StatelessWidget {
               customProfileSettings(
                 title: 'My Profile',
                 iconPath: AppAssets.profileIcon,
+                onTap:
+                    () => MyNavigator.goTo(
+                      screen: UserProfile(),
+                      isReplace: false,
+                    ),
               ),
               SizedBox(height: ResponsiveHelper.h(context, height: 12)),
               customProfileSettings(
@@ -88,6 +96,11 @@ class ProfileView extends StatelessWidget {
               customProfileSettings(
                 title: 'Settings',
                 iconPath: AppAssets.settingsIcon,
+                onTap:
+                    () => MyNavigator.goTo(
+                      screen: SettingView(),
+                      isReplace: false,
+                    ),
               ),
               SizedBox(height: ResponsiveHelper.h(context, height: 58)),
               Padding(

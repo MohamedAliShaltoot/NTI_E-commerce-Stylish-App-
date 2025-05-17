@@ -12,6 +12,10 @@ abstract class TranslationKeys {
       'Alot of talk, Alot of talk, Alot of talk, Alot of talk, Alot of talk, Alot of talk, Alot of talk, Alot of talk';
   static const String prev = 'Prev';
   static const String next = 'Next';
+  static const String save = 'Save';
+   static const String arabic = 'AR';
+    static const String english = 'EN';
+   static const String language= 'Language';
   static const String skip = 'Skip';
   static const String getStarted = 'Get Started';
   static const String createAccount = 'Create Account';
