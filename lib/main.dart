@@ -11,12 +11,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
   await TranslationHelper.setLanguage();
-  runApp(const MyApp());
+  runApp(const StylishApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class StylishApp extends StatelessWidget {
+  const StylishApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +23,14 @@ class MyApp extends StatelessWidget {
       locale: Locale(CacheData.lang!),
       translations: TranslationHelper(),
       debugShowCheckedModeBanner: false,
-      
+
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.scaffoldBackground,
         fontFamily: AppStrings.fontFamily,
       ),
       title: AppStrings.appTitle,
-      
+
       home: SplashView(),
     );
   }
 }
-
