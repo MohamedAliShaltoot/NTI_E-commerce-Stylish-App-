@@ -5,6 +5,7 @@ import 'package:nti_grad_project/core/translation/translation_keys.dart';
 import 'package:nti_grad_project/core/utils/app_assets.dart';
 import 'package:nti_grad_project/core/widgets/my_button.dart';
 import 'package:nti_grad_project/features/auth/views/login_view.dart';
+import 'package:nti_grad_project/features/auth/views/register_view.dart';
 import 'package:nti_grad_project/features/on_boarding/widgets/my_outlined_button.dart';
 
 
@@ -74,7 +75,11 @@ class GetStartedView extends StatelessWidget {
                 SizedBox(height: ResponsiveHelper.h(context, height: 15)),
                 MyOutlinedButton(
                   title: TranslationKeys.register.tr,
-                  onPressed: () {},
+                  onPressed: () {
+                    MyNavigator.goTo(screen: RegisterView(),
+                      isReplace:false,
+                    );
+                  },
                 ),
               ],
             ),

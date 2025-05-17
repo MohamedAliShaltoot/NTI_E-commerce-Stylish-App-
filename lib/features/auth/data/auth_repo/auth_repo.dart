@@ -6,7 +6,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:nti_grad_project/core/network/api_response.dart';
 import 'package:nti_grad_project/features/auth/data/models/login_response_model.dart';
 
-
 import '../../../../core/cache/cache_helper.dart';
 import '../../../../core/cache/cache_keys.dart';
 import '../../../../core/network/api_helper.dart';
@@ -21,24 +20,20 @@ class AuthRepo {
 
   ApiHelper apiHelper = ApiHelper();
 
-
-
   Future<Either<String, void>> register({
     required String fullName,
     required String password,
     required String email,
     required String phone,
-   
   }) async {
     try {
       await apiHelper.postRequest(
         endPoint: EndPoints.register,
         data: {
-          ApiKeys.userNameApiKey: fullName,
+          ApiKeys.nameApiKey: fullName,
           ApiKeys.passwordApiKey: password,
           ApiKeys.emailApiKey: email,
           ApiKeys.phoneApiKey: phone,
-          
         },
       );
       return Right(null);
@@ -63,10 +58,7 @@ class AuthRepo {
         // sendRefreshToken: true,
         isProtected: true,
         endPoint: EndPoints.login,
-        data: {
-          ApiKeys.emailApiKey: email,
-          ApiKeys.passwordApiKey: password,
-        },
+        data: {ApiKeys.emailApiKey: email, ApiKeys.passwordApiKey: password},
       );
       LoginResponseModel loginResponseModel = LoginResponseModel.fromJson(
         response.data,
