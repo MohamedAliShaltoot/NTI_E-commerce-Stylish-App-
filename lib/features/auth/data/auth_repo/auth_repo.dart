@@ -24,23 +24,21 @@ class AuthRepo {
 
 
   Future<Either<String, void>> register({
-    required String username,
+    required String fullName,
     required String password,
-    required XFile? image,
+    required String email,
+    required String phone,
+   
   }) async {
     try {
       await apiHelper.postRequest(
         endPoint: EndPoints.register,
         data: {
-          ApiKeys.userNameApiKey: username,
+          ApiKeys.userNameApiKey: fullName,
           ApiKeys.passwordApiKey: password,
-          ApiKeys.imageApiKey:
-              image == null
-                  ? null
-                  : await MultipartFile.fromFile(
-                    image.path,
-                    filename: image.name,
-                  ),
+          ApiKeys.emailApiKey: email,
+          ApiKeys.phoneApiKey: phone,
+          
         },
       );
       return Right(null);
