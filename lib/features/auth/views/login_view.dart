@@ -1,9 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:nti_grad_project/core/helper/awssome_snack_bar.dart';
 
 import 'package:nti_grad_project/core/helper/custom_svg_picture.dart';
 import 'package:nti_grad_project/core/helper/my_navigator.dart';
